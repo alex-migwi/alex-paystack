@@ -1,0 +1,13 @@
+{
+  "name": "webhook-test-server",
+  "version": "1.0.0",
+  "description": "Minimal Paystack Webhook Receiver for testing CLI webhook triggers and signature verification",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
