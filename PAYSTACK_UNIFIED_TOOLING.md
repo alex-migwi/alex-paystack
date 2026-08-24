@@ -230,8 +230,6 @@ steps:
         --domain test \
         --json > response.json
 ```
-
-
 > Note: We completely revamped the Paystack CLI from an interactive REPL into a lightning-fast, scriptable CLI with automatic secret key resolution and standard JSON output.
 
 ---
