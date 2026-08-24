@@ -1,0 +1,5 @@
+# Ignore independent sub-repositories locally housed within this workspace folder
+paystack-docs/
+paystack-sdk-gen/
+paystack-spec-enriched/
+paystack-cli/
