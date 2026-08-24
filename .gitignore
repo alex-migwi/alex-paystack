@@ -3,3 +3,7 @@ paystack-docs/
 paystack-sdk-gen/
 paystack-spec-enriched/
 paystack-cli/
+
+# Dependencies
+node_modules/
+webhook-test-server/node_modules/
