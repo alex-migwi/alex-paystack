@@ -19,8 +19,8 @@ app.get('/', (req, res) => {
     message: 'Paystack Webhook Test Receiver is active',
     webhookEndpoint: `http://localhost:${PORT}/webhook`,
     usage: {
-      cliTriggerExample: `paystack webhook trigger charge.success --forward-to http://localhost:${PORT}/webhook`,
-      cliListenExample: `paystack webhook listen --port 7777 --forward-to http://localhost:${PORT}/webhook`
+      cliTriggerExample: `paystack-cli webhook trigger charge.success --forward-to http://localhost:${PORT}/webhook`,
+      cliListenExample: `paystack-cli webhook listen --port 7777 --forward-to http://localhost:${PORT}/webhook`
     }
   });
 });
@@ -70,5 +70,5 @@ app.post('/webhook', (req, res) => {
 app.listen(PORT, () => {
   console.log(`\nPaystack Webhook Receiver running on http://localhost:${PORT}`);
   console.log(`Webhook URL: http://localhost:${PORT}/webhook`);
-  console.log(`Ready to receive CLI triggers: paystack webhook trigger charge.success --forward-to http://localhost:${PORT}/webhook\n`);
+  console.log(`Ready to receive CLI triggers: paystack-cli webhook trigger charge.success --forward-to http://localhost:${PORT}/webhook\n`);
 });
