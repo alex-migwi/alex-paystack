@@ -18,7 +18,7 @@ Enriched OpenAPI 3.0 Spec • Interactive Docs • Multi-Language SDK Generator 
 
 ### 🏛️ Ecosystem Overview
 
-- **1. Enriched OpenAPI Spec**: Single source of truth with Stripe-quality metadata & 100% operationId coverage.
+- **1. Enriched OpenAPI Spec**: Single source of truth with quality metadata & 100% operationId coverage.
 - **2. Interactive Docs**: Next.js & Markdoc interactive developer experience with live API execution.
 - **3. Multi-Language SDK Gen**: 10-language SDK generator with exponential backoff & auto-idempotency.
 - **4. Modern Scriptable CLI**: Fast, non-interactive terminal tool with automatic key resolution & zero-dependency webhooks.
@@ -50,7 +50,7 @@ echo '[OK] paystack-cli (@paystack-oss/paystack-cli ~360ms latency)'
 
 ### Critical: The "Static" Documentation & Manual Integration Loop
 - The Gap: `Docs are read-only`. Developers must `manually copy keys, switch tabs to the dashboard, configure Postman, and guess error states`.
-- Impact: `High drop-off during activation`. Senior developers (target market) view this as "legacy" compared to Stripe.
+- Impact: `High drop-off during activation`. Senior developers (target market) view this as "legacy" compared to global standards set by payment giants like Stripe.
 - Evidence: Paystack’s own 2024 research noted developers want "better documentation to understand how to maximize use of tools" and cited a lack of advanced technical content.
 - Why Fix First: It blocks everyone. You cannot activate a user who cannot successfully make their first API call within 5 minutes. 
 
@@ -76,13 +76,13 @@ echo '[OK] paystack-cli (@paystack-oss/paystack-cli ~360ms latency)'
 <!-- duration: 10s -->
 <!-- columns: 2 -->
 
-This serves as the single source of truth for the **Stripe-Quality Enriched Paystack OpenAPI Specification**. It synchronizes with the official `PaystackOSS/openapi` repository, applies structural, resilience, and developer-experience enrichments (`x-code-samples`, `x-operation-id`, `x-idempotency`, `x-retry-safe`, `x-dont-retry`, `x-pagination`, `x-deprecated-reason`, polymorphic webhook event schemas), and outputs unified distribution files (`dist/paystack-enriched.yaml` and `dist/paystack-enriched.json`).
+This serves as the single source of truth for the **Enriched Paystack OpenAPI Specification**. It synchronizes with the official `PaystackOSS/openapi` repository, applies structural, resilience, and developer-experience enrichments (`x-code-samples`, `x-operation-id`, `x-idempotency`, `x-retry-safe`, `x-dont-retry`, `x-pagination`, `x-deprecated-reason`, polymorphic webhook event schemas), and outputs unified distribution files (`dist/paystack-enriched.yaml` and `dist/paystack-enriched.json`).
 
 - `**How it helps Developers**`: Eliminates drift. If the API changes, the docs, SDKs, and CLI update instantly. Guarantees type safety and accurate examples.
 - `**How it helps Paystack**`: Reduces engineering maintenance overhead (no manual SDK updates). Increases activation rates by lowering TTV. Positions Paystack as "Enterprise Ready" for senior devs.
 
 <!-- col-break -->
-### 1. Stripe Like OpenAPI Spec Enrichment Features
+### 1. OpenAPI Spec Enrichment Features
 
 | Extension / Metadata | Purpose & Target Operations |
 | :--- | :--- |
@@ -202,7 +202,7 @@ paystack api transaction initialize --email "alex@example.com" --amount 50000 --
 ### Paystack CLI modernization
 
 - **Old REPL CLI**: Acted like a chat session (paystack> ). This supports exploration, but breaks continuous integration and automation.
-- **New Scriptable CLI**: Acts like standard Unix tools (git, docker, stripe-cli). Every command can be scripted, automated, piped, and embedded in production build pipelines.
+- **New Scriptable CLI**: Acts like standard Unix tools (e.g git, docker, stripe-cli). Every command can be scripted, automated, piped, and embedded in production build pipelines.
 
 <!-- col-break -->
 
@@ -268,7 +268,7 @@ paystack webhook trigger charge.success --forward-to http://localhost:3000/api/w
 
 - **Single Source of Truth**: `paystack-spec-enriched` powers Docs, SDKs, and CLI in total sync.
 - **Zero API Drift**: Automated GitHub Actions workflows ensure spec changes propagate instantly.
-- **Stripe-Quality Standards**: Resilience, auto-pagination, typed errors, and high performance.
+- **Global Standards**: Resilience, auto-pagination, typed errors, and high performance.
 - **Developer First**: Built for seamless integration in local terminal sessions, IDEs, and CI/CD pipelines.
 
 <img src="./images/Enriched Architecture Flow.png" alt="Unified Developer Infrastructure Flow" />
